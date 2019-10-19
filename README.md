@@ -10,7 +10,7 @@ For example: ./stl-slicer stlfile.stl 1063 200
 This command will slice the stl file 1063 times on the Z axis and output those as multiple bmp's with a resolution of 200px.
 
 # Contribution
-The stl-slicer is far from done because the initial version(commit) was written in one day. That's why the code can be a mess, inefficient and last but not least contain memory leaks.
+The stl-slicer is far from done because the initial version(commit) was written in one day(and in a hurry). That's why the code can be a mess, inefficient and last but not least contain memory leaks.
 
 The following things can be examples of what still can be done:
 - Running the bmp export on different threads so that the slicing algorithm speed won't be bottlenecked by the bmp export.
