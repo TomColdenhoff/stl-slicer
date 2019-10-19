@@ -18,4 +18,4 @@ The following things can be examples of what still can be done:
 - Own bmp export code, we now use a library which doesn't exactly fit our needs.
 - Fix memory leaks.
 - make code more efficient and cleaner.
-- other output formats support
+- other output formats support.
