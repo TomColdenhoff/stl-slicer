@@ -71,8 +71,8 @@ void Slicer::SliceAndExport(Model *model, const char *fileName, int sliceAmount,
         std::stringstream ss;
         ss << fileName << "-" << i << ".bmp";
 
-        Exporter exporter;
-        exporter.Export(model, points, ss.str(), resolution);
+        std::thread thread(&Exporter::Export, Exporter(), model, points, ss.str(), resolution);
+        thread.detach();
 
         std::cout << clippingLineZ  << "%" << std::endl;
     }

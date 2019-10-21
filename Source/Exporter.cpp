@@ -11,10 +11,10 @@ void Exporter::Export(Model* model, std::vector<Point> points, std::basic_string
 {
     float factor = resolution / (model->GetBoundingBoxEnd().GetX() - model->GetBoundingBoxStart().GetX());
 
-    int startX = model->GetBoundingBoxStart().GetX();
-    int startY = model->GetBoundingBoxStart().GetY();
+    float startX = model->GetBoundingBoxStart().GetX();
+    float startY = model->GetBoundingBoxStart().GetY();
 
-    bitmap_image image(resolution,resolution);
+    bitmap_image image(resolution, resolution);
 
     // set background to white
     image.set_all_channels(255, 255, 255);
@@ -29,5 +29,7 @@ void Exporter::Export(Model* model, std::vector<Point> points, std::basic_string
     }
 
     image.save_image(filename);
+
+    std::cout << "Exported " << filename << std::endl;
 }
 

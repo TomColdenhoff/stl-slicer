@@ -6,6 +6,7 @@
 #define STL_SLICER_TRIANGLE_H
 
 #include <vector>
+#include <climits>
 
 class Coordinate;
 
